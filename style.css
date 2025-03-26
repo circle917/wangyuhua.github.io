@@ -1,0 +1,198 @@
+/* style.css */
+:root {
+    --primary: #2b6cb0;
+    --secondary: #4299e1;
+    --accent: #f6ad55;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    color: #2d3748;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    background: linear-gradient(160deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    border: 4px solid white;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 音频样式 */
+.audio-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* 主要内容区 */
+.main-content {
+    padding: 3rem;
+    display: grid;
+    gap: 3rem;
+}
+
+.section {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent);
+}
+
+/* 专业介绍 */
+.subject-list {
+    columns: 2;
+    margin: 1rem 0;
+}
+
+.subject-list li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.subject-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+}
+
+/* 语言能力 */
+.lang-badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.badge {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* 时间线样式 */
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid var(--primary);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.time {
+    color: var(--secondary);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/* 证书展示 */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.cert-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.cert-card i {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* 社会实践 */
+.event-cards {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.event-card {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-left: 4px solid var(--secondary);
+    border-radius: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem;
+    }
+    .subject-list {
+        columns: 1;
+    }
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+}
